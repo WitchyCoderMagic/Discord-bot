@@ -19,5 +19,11 @@ async def hello(ctx):
   await ctx.send("Hi I'm Frenbot, I'm here to help with whatever you need! :3")
 
 
+@client.command()
+#look into what ctx means
+async def goodbye(ctx):
+  await ctx.send("Bye bye, I hope you have a good day!")
+
+
 discord_bot_token = os.environ['SECRET_DISCORD']
 client.run(discord_bot_token)
