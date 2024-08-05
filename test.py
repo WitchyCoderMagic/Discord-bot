@@ -1,11 +1,23 @@
 import discord
-import os
 from discord.ext import commands
+import os
 #type: ignore
 
-#establishing intents
-intents = discord.Intents.default()
-intents.message_content = True
-intents.members = True
-client = discord.Client(intents=intents)
+client = commands.Bot(command_prefix="$", intents=discord.Intents.all())
 
+
+#readying the bot for commands
+@client.event
+async def on_ready():
+  print('The bot is now ready to take commands mistrss')
+  print('----------------------')
+
+
+@client.command()
+#look into what ctx means
+async def hello(ctx):
+  await ctx.send("Hi I'm Frenbot, I'm here to with whatever you need! :3")
+
+
+discord_bot_token = os.environ['SECRET_DISCORD']
+client.run(discord_bot_token)
