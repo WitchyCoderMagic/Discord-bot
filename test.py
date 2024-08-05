@@ -16,7 +16,7 @@ async def on_ready():
 @client.command()
 #look into what ctx means
 async def hello(ctx):
-  await ctx.send("Hi I'm Frenbot, I'm here to with whatever you need! :3")
+  await ctx.send("Hi I'm Frenbot, I'm here to help with whatever you need! :3")
 
 
 discord_bot_token = os.environ['SECRET_DISCORD']

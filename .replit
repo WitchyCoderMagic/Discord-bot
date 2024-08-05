@@ -1,4 +1,4 @@
-entrypoint = "discorb_bot.py"
+entrypoint = "test.py"
 modules = ["python-3.10"]
 
 [nix]
@@ -11,5 +11,5 @@ language = "python3"
 requiredFiles = [".replit", "replit.nix"]
 
 [deployment]
-run = ["python3", "discorb_bot.py"]
+run = ["python3", "test.py"]
 deploymentTarget = "cloudrun"
