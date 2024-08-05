@@ -19,5 +19,10 @@ async def hello(ctx):
   await ctx.send("Hi I'm Frenbot, I'm here to help with whatever you need! :3")
 
 
+@client.event
+async def on_member_join(member):
+  await member.send('test')
+
+
 discord_bot_token = os.environ['SECRET_DISCORD']
 client.run(discord_bot_token)
